@@ -1,0 +1,30 @@
+server:
+  address: ${SERVER_ADDRESS:127.0.0.1}
+  port: ${PORT:8080}
+  servlet:
+    session:
+      timeout: 30m
+      cookie:
+        same-site: strict
+spring:
+  application:
+    name: support-assistant
+  datasource:
+    url: jdbc:h2:file:./data/support;MODE=MySQL;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password: ''
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  mvc:
+    problemdetails:
+      enabled: true
+app:
+  username: ${APP_USERNAME:demo}
+  password: ${APP_PASSWORD:demo-support}
+  llm:
+    enabled: ${LLM_ENABLED:false}
+    endpoint: ${LLM_ENDPOINT:}
+    api-key: ${LLM_API_KEY:}
+    model: ${LLM_MODEL:}

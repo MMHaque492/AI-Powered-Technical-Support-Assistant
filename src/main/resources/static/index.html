@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Support Desk | Mizanul Haque</title><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/">S<span>Support Desk</span></a><div class="header-right"><span id="mode" class="badge">Connecting…</span><button id="logout" class="quiet">Sign out</button></div></header>
+<main>
+<section class="hero"><div><p class="eyebrow">AI-POWERED TECHNICAL SUPPORT</p><h1>From error to<br><span>next steps.</span></h1><p class="subtitle">Capture the problem. Explore possible causes.<br>Keep every troubleshooting step in one place.</p></div><aside class="hero-note"><span class="pulse"></span> YOUR SUPPORT WORKSPACE<p>Java + Spring Boot<br>Persistent tickets · Guided troubleshooting</p></aside></section>
+<div id="notice" role="status" aria-live="polite"></div>
+<div class="workspace">
+<section class="panel composer"><div class="section-label">01 / CAPTURE</div><h2>What went wrong?</h2><form id="ticket-form">
+<label for="title">Issue title</label><input id="title" name="title" required maxlength="160" placeholder="e.g. MySQL connection refused">
+<label for="environment">Environment</label><input id="environment" name="environment" required maxlength="120" placeholder="e.g. Java 21 · Windows 11 · MySQL 8">
+<label for="description">Describe the issue</label><textarea id="description" name="description" required maxlength="6000" rows="7" placeholder="What happened? What did you expect? Include sanitized error messages and steps already tried."></textarea>
+<p class="hint">Keep passwords, API keys and personal data out of tickets. In LLM mode, ticket details are sent to your configured provider when you select Analyze.</p><button type="submit" class="primary">Create ticket <span>↗</span></button>
+</form></section>
+<section class="panel history"><div class="section-label">02 / INVESTIGATE</div><div class="section-heading"><h2>Your tickets</h2><button id="refresh" class="quiet">Refresh</button></div><p id="count" class="hint"></p><div id="tickets"></div><div class="pagination"><button id="prev" class="quiet">← Previous</button><span id="page"></span><button id="next" class="quiet">Next →</button></div></section>
+<section class="panel detail" id="detail"><div class="section-label">03 / RESOLVE</div><div id="empty-detail"><h2>A clearer path forward.</h2><p class="subtitle">Select a ticket to review its details, generate troubleshooting steps and track resolution.</p><div class="empty-icon">↗</div></div><div id="ticket-detail" hidden><div class="section-heading"><h2 id="detail-title"></h2><span id="category" class="badge"></span></div><p id="meta" class="hint"></p><p id="issue-text" class="preserve"></p><label for="status">Ticket status</label><select id="status"><option value="OPEN">Open</option><option value="IN_PROGRESS">In progress</option><option value="RESOLVED">Resolved</option></select><button id="analyze" class="primary">Analyze issue ↗</button><div class="analysis-heading"><h3>Troubleshooting</h3><span id="source" class="badge"></span></div><p id="analysis" class="preserve"></p><p class="hint">Suggestions can be incomplete. Verify changes in a test environment; no commands are executed by this app.</p></div></section>
+</div>
+<footer>Built by Md Mizanul Haque <span>SUPPORT DESK / 01</span></footer>
+</main></body></html>
